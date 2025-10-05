@@ -1,5 +1,5 @@
-const DATA_STUCTURE = {
-  ds: {
+const DATASTRUCTURE = {
+  dsa: {
     easy: [
       {
         question: "Which of the following is a linear data structure?",
@@ -251,4 +251,4 @@ const DATA_STUCTURE = {
   },
 };
 
-export default DATA_STUCTURE;
+export default DATASTRUCTURE;

@@ -1,5 +1,5 @@
 const JAVASCRIPT = {
-  js: {
+  javascript: {
     easy: [
       {
         question: "Which of the following is a correct way to declare a variable in JavaScript?",

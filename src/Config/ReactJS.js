@@ -1,5 +1,5 @@
-const REACTJS = {
-  reactjs: {
+const REACT = {
+  react: {
     easy: [
       {
         question: "Which function is used to define a React component?",
@@ -86,4 +86,4 @@ const REACTJS = {
   },
 };
 
-export default REACTJS;
+export default REACT;

@@ -4,16 +4,16 @@ import toast, { Toaster } from "react-hot-toast";
 import Swal from "sweetalert2";
 
 import C from "../Config/C.js";
-import Cpp from "../Config/Cpp.js";
+import CPP from "../Config/Cpp.js";
 import CSS from "../Config/CSS.js";
-import DATA_STUCTURE from "../Config/Data-structure.js";
+import DATASTRUCTURE from "../Config/DataStructure.js";
 import HTML from "../Config/HTML.js";
 import JAVA from "../Config/Java.js";
 import JAVASCRIPT from "../Config/Javascript.js";
 import NODEJS from "../Config/NodeJS.js";
 import PHP from "../Config/PHP.js";
 import PYTHON from "../Config/Python.js";
-import REACTJS from "../Config/ReactJS.js";
+import REACT from "../Config/ReactJS.js";
 import TAILWIND from "../Config/Tailwind.js";
 
 function QuizPage() {
@@ -32,14 +32,14 @@ function QuizPage() {
       setLanguage(selectedLang);
       if (selectedLang === "html") quizData = HTML.html[selectedLevel];
       else if (selectedLang === "c") quizData = C.c[selectedLevel];
-      else if (selectedLang === "ds") quizData = DATA_STUCTURE.ds[selectedLevel];
+      else if (selectedLang === "dsa") quizData = DATASTRUCTURE.dsa[selectedLevel];
       else if (selectedLang === "javascript") quizData = JAVASCRIPT.javascript[selectedLevel];
       else if (selectedLang === "python") quizData = PYTHON.python[selectedLevel];
       else if (selectedLang === "java") quizData = JAVA.java[selectedLevel];
-      else if (selectedLang === "reactjs") quizData = REACTJS.reactjs[selectedLevel];
+      else if (selectedLang === "react") quizData = REACT.react[selectedLevel];
       else if (selectedLang === "nodejs") quizData = NODEJS.nodejs[selectedLevel];
       else if (selectedLang === "css") quizData = CSS.css[selectedLevel];
-      else if (selectedLang === "cpp") quizData = Cpp.cpp[selectedLevel];
+      else if (selectedLang === "cpp") quizData = CPP.cpp[selectedLevel];
       else if (selectedLang === "php") quizData = PHP.php[selectedLevel];
       else if (selectedLang === "tailwind") quizData = TAILWIND.tailwind[selectedLevel];
     }
