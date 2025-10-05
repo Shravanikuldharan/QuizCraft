@@ -41,7 +41,7 @@ function Dashboard() {
           Select any language to start your coding quiz adventure. Learn, challenge yourself, and explore programming in a fun, interactive way!
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 w-full max-w-6xl">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-16 w-full max-w-6xl">
           {languages.map((lang) => (
             <Link
               key={lang.name}
@@ -53,10 +53,10 @@ function Dashboard() {
               "
             >
               <div className="w-16 h-16 mb-3 flex items-center justify-center transition-transform duration-500 hover:scale-110">
-                <img src={lang.icon} className="w-10 h-10" />
+                <img src={lang.icon} className="w-15 h-15" />
               </div>
 
-              <span className="text-xl font-semibold text-purple-900 transition-colors duration-500 hover:text-[#BE5985]">
+              <span className="text-xl font-semibold text-purple-900 transition-colors duration-500 hover:text-pink-600">
                 {lang.name}
               </span>
             </Link>
