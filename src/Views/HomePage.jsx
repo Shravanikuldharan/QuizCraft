@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import Features from "../Components/Features";
+import Footer from "../Components/Footer";
 
 function HomePage() {
   return (
@@ -26,6 +27,8 @@ function HomePage() {
 
       {/* Features Section */}
       <Features />
+
+      <Footer/>
     </div>
   );
 }
