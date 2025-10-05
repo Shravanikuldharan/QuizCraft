@@ -1,5 +1,5 @@
-import { Link } from "react-router";
 import Footer from "../Components/Footer";
+import Swal from "sweetalert2";
 import htmlIcon from "../assets/languages/html.png";
 import cssIcon from "../assets/languages/css.png";
 import jsIcon from "../assets/languages/js.png";
@@ -29,10 +29,34 @@ const languages = [
 ];
 
 function Dashboard() {
+  const handleLanguageClick = (lang) => {
+    Swal.fire({
+      title: `Select difficulty for ${lang.name}`,
+      input: 'select',
+      inputOptions: {
+        easy: 'Easy',
+        medium: 'Medium',
+        hard: 'Hard',
+      },
+      inputPlaceholder: 'Choose a difficulty',
+      showCancelButton: true,
+      confirmButtonText: 'Start Quiz',
+      cancelButtonText: 'Cancel',
+      inputValidator: (value) => {
+        if (!value) {
+          return 'You need to select a difficulty!';
+        }
+      },
+    }).then((result) => {
+      if (result.isConfirmed && result.value) {
+        window.location.href = `/quiz/${lang.name.toLowerCase()}?level=${result.value}`;
+      }
+    });
+  };
+
   return (
     <div>
       <div className="min-h-screen w-screen flex flex-col items-center justify-start pt-10 pb-10 px-4 sm:px-10 bg-purple-50">
-
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 text-center bg-gradient-to-r from-purple-500 via-pink-500 to-red-400 text-transparent bg-clip-text leading-snug break-words">
           Choose a Language & Level Up Your Skills
         </h2>
@@ -43,10 +67,11 @@ function Dashboard() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-16 w-full max-w-6xl">
           {languages.map((lang) => (
-            <Link
+            <div
               key={lang.name}
-              to={`/quiz/${lang.name.toLowerCase()}`}
+              onClick={() => handleLanguageClick(lang)}
               className="
+                cursor-pointer
                 flex flex-col items-center justify-center h-40 rounded-2xl p-4 bg-white border border-gray-200
                 shadow-md text-center transition-all duration-500
                 hover:-translate-y-2 hover:scale-105 hover:border-[#BE5985] hover:bg-[#F8E7F6] hover:shadow-lg
@@ -59,7 +84,7 @@ function Dashboard() {
               <span className="text-xl font-semibold text-purple-900 transition-colors duration-500 hover:text-pink-600">
                 {lang.name}
               </span>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
