@@ -8,7 +8,7 @@ import nodeIcon from "../assets/languages/nodejs.png";
 import cIcon from "../assets/languages/c-lang.png";
 import cppIcon from "../assets/languages/cpp.png";
 import pythonIcon from "../assets/languages/python.png";
-import DSAIcon from "../assets/languages/data-structure.png";
+import dsaIcon from "../assets/languages/data-structure.png";
 import javaIcon from "../assets/languages/java.png";
 import phpIcon from "../assets/languages/php.png";
 import tailwindIcon from "../assets/languages/tailwind.png";
@@ -22,7 +22,7 @@ const languages = [
   { name: "React", icon: reactIcon },
   { name: "NodeJS", icon: nodeIcon },
   { name: "Python", icon: pythonIcon },
-  { name: "Data Structure", icon: DSAIcon },
+  { name: "Data Structure", icon: dsaIcon },
   { name: "Java", icon: javaIcon },
   { name: "PHP", icon: phpIcon },
   { name: "Tailwind", icon: tailwindIcon },
@@ -32,19 +32,19 @@ function Dashboard() {
   const handleLanguageClick = (lang) => {
     Swal.fire({
       title: `Select difficulty for ${lang.name}`,
-      input: 'select',
+      input: "select",
       inputOptions: {
-        easy: 'Easy',
-        medium: 'Medium',
-        hard: 'Hard',
+        easy: "Easy",
+        medium: "Medium",
+        hard: "Hard",
       },
-      inputPlaceholder: 'Choose a difficulty',
+      inputPlaceholder: "Choose a difficulty",
       showCancelButton: true,
-      confirmButtonText: 'Start Quiz',
-      cancelButtonText: 'Cancel',
+      confirmButtonText: "Start Quiz",
+      cancelButtonText: "Cancel",
       inputValidator: (value) => {
         if (!value) {
-          return 'You need to select a difficulty!';
+          return "You need to select a difficulty!";
         }
       },
     }).then((result) => {
@@ -62,10 +62,11 @@ function Dashboard() {
         </h2>
 
         <p className="mb-10 text-center max-w-2xl text-purple-900 text-lg sm:text-xl">
-          Select any language to start your coding quiz adventure. Learn, challenge yourself, and explore programming in a fun, interactive way!
+          Select any language to start your coding quiz adventure. Learn, challenge
+          yourself, and explore programming in a fun, interactive way!
         </p>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-16 w-full max-w-6xl">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-16 w-full max-w-5xl">
           {languages.map((lang) => (
             <div
               key={lang.name}
@@ -73,15 +74,16 @@ function Dashboard() {
               className="
                 cursor-pointer
                 flex flex-col items-center justify-center h-40 rounded-2xl p-4 bg-white border border-gray-200
-                shadow-md text-center transition-all duration-500
-                hover:-translate-y-2 hover:scale-105 hover:border-[#BE5985] hover:bg-[#F8E7F6] hover:shadow-lg
+                shadow-md text-center transition-all duration-500 border-gray-1
+                hover:-translate-y-2 hover:scale-110 hover:border-purple-300 hover:2 border-1 hover:border-purple-400
+                hover:bg-gradient-to-r hover:from-purple-200 hover:to-pink-200 hover:shadow-lg
               "
             >
               <div className="w-16 h-16 mb-3 flex items-center justify-center transition-transform duration-500 hover:scale-110">
                 <img src={lang.icon} className="w-15 h-15" />
               </div>
 
-              <span className="text-xl font-semibold text-purple-900 transition-colors duration-500 hover:text-pink-600">
+              <span className="text-xl font-semibold text-purple-900 transition-colors duration-500 hover:text-purple-800">
                 {lang.name}
               </span>
             </div>
