@@ -4,16 +4,15 @@ import peerlistIcon from "../assets/peerlist.png";
 
 function Footer() {
   const socialLinks = [
-    { icon: githubIcon, url: "https://github.com/" },
-    { icon: linkedinIcon, url: "https://linkedin.com/" },
-    { icon: peerlistIcon, url: "https://peerlist.io/" },
+    { icon: githubIcon, url: "https://github.com/Shravanikuldharan/QuizCraft" },
+    { icon: linkedinIcon, url: "https://www.linkedin.com/in/shravani-kuldharan/" },
+    { icon: peerlistIcon, url: "https://peerlist.io/shravani_k" },
   ];
 
   return (
     <footer className="bg-[#BE5985] text-white py-12 px-6 md:px-20">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center gap-10">
 
-        {/* Project Name + Description */}
         <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
           <a
             href="/"
@@ -26,7 +25,6 @@ function Footer() {
           </p>
         </div>
 
-        {/* Quick Links */}
         <div className="flex-1 flex flex-col items-center text-center space-y-2">
           <h3 className="text-xl font-semibold mb-2">Quick Links</h3>
           <a
@@ -42,6 +40,12 @@ function Footer() {
             Features
           </a>
           <a
+            href="/dashboard"
+            className="hover:text-[#F8E7F6] transition-all duration-300 transform hover:translate-x-1 cursor-pointer"
+          >
+            Dashboard
+          </a>
+          <a
             href="/contact"
             className="hover:text-[#F8E7F6] transition-all duration-300 transform hover:translate-x-1 cursor-pointer"
           >
@@ -49,7 +53,6 @@ function Footer() {
           </a>
         </div>
 
-        {/* Social Icons */}
         <div className="flex-1 flex flex-col items-center space-y-3">
           <h3 className="text-xl font-semibold mb-2 mt-[-50px]">Follow Us</h3>
           <div className="flex space-x-5 mt-1">
@@ -72,7 +75,6 @@ function Footer() {
         </div>
       </div>
 
-      {/* Copyright */}
       <div className="text-center text-gray-200 mt-10 border-t border-[#DD88CF] pt-6">
         &copy;2025 QuizCraft. All rights reserved.
       </div>
