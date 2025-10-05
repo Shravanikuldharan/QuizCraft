@@ -49,10 +49,13 @@ function Dashboard() {
       },
     }).then((result) => {
       if (result.isConfirmed && result.value) {
-        window.location.href = `/quiz/${lang.name.toLowerCase()}?level=${result.value}`;
+        localStorage.setItem("selectedLanguage", lang.name.toLowerCase());
+        localStorage.setItem("selectedLevel", result.value);
+        window.location.href = "/quiz";
       }
     });
   };
+
 
   return (
     <div>

@@ -18,12 +18,19 @@ function HomePage() {
         </p>
 
         <Link to="/dashboard">
-          <button className="px-14 py-4 text-lg font-bold bg-white text-purple-600 rounded-full shadow-lg hover:bg-gray-100 transition-all">
+          <button
+            className="px-14 py-4 text-lg font-bold bg-white text-purple-600 rounded-full shadow-lg 
+               hover:bg-gray-100 active:translate-y-1 active:shadow-md 
+               transition-all duration-300 cursor-pointer"
+          >
             Start Quiz
           </button>
         </Link>
+
       </div>
+      <div id ="features">
       <Features />
+      </div>
 
       <Footer />
     </div>
