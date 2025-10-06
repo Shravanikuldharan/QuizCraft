@@ -22,9 +22,9 @@ const featureData = [
 
 function Features() {
   return (
-    <section className="bg-[#F5F5F5] text-gray-900 py-14 px-6 md:px-20">
+    <section className="bg-[#F5F5F5] text-gray-900 py-14 px-6 sm:px-[120px] md:px-20">
       <div className="text-center mb-16">
-        <h2 className="text-xl md:text-5xl font-bold text-purple-500 mb-6">
+        <h2 className="text-xl sm:text-4xl md:text-5xl font-bold text-purple-500 mb-6">
           Why Choose QuizCraft?
         </h2>
         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
