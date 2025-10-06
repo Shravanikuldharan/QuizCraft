@@ -1,4 +1,4 @@
-const DATASTRUCTURE = {
+const DSA = {
   dsa: {
     easy: [
       {
@@ -251,4 +251,4 @@ const DATASTRUCTURE = {
   },
 };
 
-export default DATASTRUCTURE;
+export default DSA;
