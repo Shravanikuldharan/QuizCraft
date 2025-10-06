@@ -6,7 +6,6 @@ import Swal from "sweetalert2";
 import C from "../Config/C.js";
 import CPP from "../Config/Cpp.js";
 import CSS from "../Config/CSS.js";
-import DSA from "../Config/DataStructure.js";
 import HTML from "../Config/HTML.js";
 import JAVA from "../Config/Java.js";
 import JAVASCRIPT from "../Config/Javascript.js";
@@ -32,7 +31,6 @@ function QuizPage() {
       setLanguage(selectedLang);
       if (selectedLang === "html") quizData = HTML.html[selectedLevel];
       else if (selectedLang === "c") quizData = C.c[selectedLevel];
-      else if (selectedLang === "dsa") quizData = DSA.dsa[selectedLevel];
       else if (selectedLang === "javascript") quizData = JAVASCRIPT.javascript[selectedLevel];
       else if (selectedLang === "python") quizData = PYTHON.python[selectedLevel];
       else if (selectedLang === "java") quizData = JAVA.java[selectedLevel];
