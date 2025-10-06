@@ -14,6 +14,7 @@ import PHP from "../Config/PHP.js";
 import PYTHON from "../Config/Python.js";
 import REACT from "../Config/ReactJS.js";
 import TAILWIND from "../Config/Tailwind.js";
+import DATA_STRUCT from "../Config/DSA.js";
 
 function QuizPage() {
   const [questions, setQuestions] = useState([]);
@@ -31,6 +32,7 @@ function QuizPage() {
       setLanguage(selectedLang);
       if (selectedLang === "html") quizData = HTML.html[selectedLevel];
       else if (selectedLang === "c") quizData = C.c[selectedLevel];
+      else if (selectedLang === "data") quizData = DATA_STRUCT.data[selectedLevel];
       else if (selectedLang === "javascript") quizData = JAVASCRIPT.javascript[selectedLevel];
       else if (selectedLang === "python") quizData = PYTHON.python[selectedLevel];
       else if (selectedLang === "java") quizData = JAVA.java[selectedLevel];

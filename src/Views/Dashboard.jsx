@@ -22,7 +22,7 @@ const languages = [
   { name: "React", icon: reactIcon },
   { name: "NodeJS", icon: nodeIcon },
   { name: "Python", icon: pythonIcon },
-  // { name: "Data Structure", icon: dsaIcon },
+  { name: "Data Structure", icon: dsaIcon },
   { name: "Java", icon: javaIcon },
   { name: "PHP", icon: phpIcon },
   { name: "Tailwind", icon: tailwindIcon },
